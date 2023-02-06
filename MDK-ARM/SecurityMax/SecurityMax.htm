@@ -3,7 +3,7 @@
 <title>Static Call Graph - [SecurityMax\SecurityMax.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image SecurityMax\SecurityMax.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Sun Feb 05 23:34:28 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Mon Feb 06 13:18:15 2023
 <BR><P>
 <H3>Maximum Stack Usage =        144 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1062,7 +1062,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xe.o(.text)
 </UL>
 <P><STRONG><a name="[2b]"></a>TIM4_IRQHandler</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, stm32f1xx_it.o(i.TIM4_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = TIM4_IRQHandler &rArr; HAL_TIM_IRQHandler
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = TIM4_IRQHandler &rArr; Voice_Alarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_IRQHandler
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Voice_Alarm
@@ -1111,8 +1111,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f103xe.o(RESET)
 </UL>
-<P><STRONG><a name="[b9]"></a>Voice_Alarm</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, judge.o(i.Voice_Alarm))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Voice_Alarm
+<P><STRONG><a name="[b9]"></a>Voice_Alarm</STRONG> (Thumb, 106 bytes, Stack size 24 bytes, judge.o(i.Voice_Alarm))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Voice_Alarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin

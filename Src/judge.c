@@ -5,7 +5,7 @@ extern int temp1,humi1;
 
 void Mist_Spray(void)
 {
-if(humi1<70) HAL_GPIO_WritePin(GPIOD,GPIO_PIN_8,GPIO_PIN_SET);
+if(humi1<80) HAL_GPIO_WritePin(GPIOD,GPIO_PIN_8,GPIO_PIN_SET);
 else HAL_GPIO_WritePin(GPIOD,GPIO_PIN_8,GPIO_PIN_RESET);
 }
 
@@ -37,13 +37,28 @@ void Voice_Alarm(void)
  {
 	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_RESET);
 	 time1++;
-	 if(time1==5)
+	 if(time1==4)
 	 {	
 		 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_1,GPIO_PIN_SET);
    	 time1=0;
 	 }
  }
 
+  if(HAL_GPIO_ReadPin(GPIOD,GPIO_PIN_11)) 
+ {
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);
+	 time2=0;
+ }
+ else 
+ {
+	 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_RESET);
+	 time2++;
+	 if(time2==4)
+	 {	
+		 HAL_GPIO_WritePin(GPIOC,GPIO_PIN_2,GPIO_PIN_SET);
+   	 time2=0;
+	 }
+ }
 
 
 }
